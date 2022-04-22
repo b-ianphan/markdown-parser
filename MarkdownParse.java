@@ -16,7 +16,6 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen); 
-
             // This if-else statement is what allows for our code to run even when there are no closing paranthesis 
             if( openParen == -1 || closeParen == -1 ){
                 return toReturn;
@@ -27,6 +26,7 @@ public class MarkdownParse {
             } else {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
+            
             
             currentIndex = closeParen + 1;
         }

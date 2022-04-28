@@ -19,9 +19,9 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         MarkdownParse mdp = new MarkdownParse();
-        String [] expected = {"https://something.com", "some-page.html"};
+        String [] expected = {"https://something.com", "some-thing.html"};
         //expected.add("https://something.com");
-        //expected.add("some-page.html");
+        //expected.add("some-thing.html");
         //Path filename = Path.of("test-file.md");
         assertArrayEquals(expected, mdp.getLinks(content).toArray() );
     }

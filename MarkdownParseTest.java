@@ -15,7 +15,7 @@ public class MarkdownParseTest {
     public void testGetLinks(){
         MarkdownParse mdp = new MarkdownParse();
         String[] expected = {"https://something.com", "some-page.html"};
-        assertArrayEquals(expected, mdp.getLinks(Files.readString(test-file.md)));
+        assertArrayEquals(expected, mdp.getLinks(Files.readString("test-file.md")));
     }
 
 }
